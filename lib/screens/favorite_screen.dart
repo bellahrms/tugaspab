@@ -23,7 +23,6 @@ class FavoriteScreen extends StatelessWidget {
 
           final docs = snapshot.data?.docs ?? [];
           
-          // Mem-parsing dan memfilter data yang status favoritnya true secara akurat lewat aplikasi
           final List<WisataModel> listFavorit = [];
           for (var doc in docs) {
             final wisata = WisataModel.fromFirestore(doc.id, doc.data() as Map<String, dynamic>);

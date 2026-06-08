@@ -38,7 +38,7 @@ class _TambahWisataScreenState extends State<TambahWisataScreen> {
         ..style.border = 'none'
         ..style.width = '100%'
         ..style.height = '100%'
-        ..src = 'https://maps.google.com/maps?q=$query&output=embed',
+        ..src = 'https://maps.google.com/maps?q=$query&t=&z=13&ie=UTF8&iwloc=&output=embed',
     );
   }
 
@@ -134,7 +134,7 @@ class _TambahWisataScreenState extends State<TambahWisataScreen> {
           _isLoading = false;
         });
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Gagal menyimpan : $e')),
+          SnackBar(content: Text('Gagal menyimpan ke Firebase: $e')),
         );
       }
     }
@@ -155,7 +155,7 @@ class _TambahWisataScreenState extends State<TambahWisataScreen> {
               children: [
                 CircularProgressIndicator(),
                 SizedBox(height: 16),
-                Text('Sedang Menyimpan Data...'),
+                Text('Sedang Menyimpan Data ke Firebase...'),
               ],
             ),
           )
